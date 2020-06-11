@@ -4,11 +4,11 @@ import mock from '../utils/mock';
 mock.onGet('/api/social/profile').reply(200, {
   user: {
     id: '5e86809283e28b96d2d38537',
-    name: 'Katarina Smith',
-    email: 'katarina.smith@devias.io',
+    name: 'Doreen Johnson',
+    email: 'Doreen.Johnson@amashr.com',
     bio: 'Sales Manager',
-    avatar: '/static/images/avatars/avatar_6.png',
-    cover: '/static/images/covers/cover_1.jpg',
+    avatar: '/static/images/avatars/avatar_9.png',
+    cover: '/static/images/covers/cover_2.jpg',
     connectedStatus: 'not_connected',
     profileProgress: 50,
     quote: 'Everyone thinks of changing the world, but no one thinks of changing himself.',

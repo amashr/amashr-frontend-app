@@ -9,19 +9,19 @@ const JWT_EXPIRES_IN = '2 days';
 const db = {
   user: {
     id: '5e86809283e28b96d2d38537',
-    avatar: '/static/images/avatars/avatar_6.png',
+    avatar: '/static/images/avatars/avatar_9.png',
     bio: 'Sales Manager',
     canHire: false,
-    country: 'USA',
-    email: 'katarina.smith@devias.io',
+    country: 'Tanzania',
+    email: 'Doreen.Johnson@amashr.com',
     username: 'admin',
     password: 'admin',
-    firstName: 'Katarina',
+    firstName: 'Doreen',
     isPublic: true,
-    lastName: 'Smith',
-    phone: '+40 777666555',
+    lastName: 'Jonhson',
+    phone: '+255 745666554',
     role: 'admin',
-    state: 'New York',
+    state: 'Dar es Salaam',
     timezone: '4:32PM (GMT-4)'
   }
 };
