@@ -123,7 +123,7 @@ function Connections({ className, ...rest }) {
           disableUnderline
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="Search connections"
+          placeholder="Search team member"
         />
       </Box>
       <Divider />

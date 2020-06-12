@@ -120,7 +120,7 @@ function Search() {
                   )
                 }}
                 onChange={(event) => setValue(event.target.value)}
-                placeholder="Search people &amp; places"
+                placeholder="Search people &amp; department"
                 value={value}
                 variant="outlined"
               />

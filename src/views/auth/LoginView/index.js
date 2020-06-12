@@ -118,7 +118,7 @@ function LoginView() {
               variant="subtitle1"
               color="textSecondary"
             >
-              Sign in on the internal platform
+              AMASHR internal platform
             </Typography>
             <Box mt={2}>
               <Alert
@@ -127,7 +127,7 @@ function LoginView() {
                 <div>
                   Use
                   {' '}
-                  <b>admin@devias.io</b>
+                  <b>doreen.johnson@amashr.com</b>
                   {' '}
                   and password
                   {' '}
@@ -169,20 +169,20 @@ function LoginView() {
             >
               <Avatar
                 alt="Person"
-                src="/static/images/avatars/avatar_2.png"
+                src="/static/images/avatars/avatar_9.png"
               />
               <Box ml={3}>
                 <Typography
                   color="inherit"
                   variant="body1"
                 >
-                  Allison Maumba
+                  Doreen Johnson
                 </Typography>
                 <Typography
                   color="inherit"
                   variant="body2"
                 >
-                  Manager at inVision
+                  Sales Manager at Vodacom
                 </Typography>
               </Box>
             </Box>
