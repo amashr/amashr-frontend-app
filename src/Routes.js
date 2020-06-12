@@ -55,6 +55,11 @@ const routesConfig = [{
   },
   {
     exact: true,
+    path: '/app/calendar',
+    component: lazy(() => import('./views/calendar/CalendarView'))
+  },
+  {
+    exact: true,
     path: '/app/social/profile',
     component: lazy(() => import('./views/social/ProfileView'))
   },

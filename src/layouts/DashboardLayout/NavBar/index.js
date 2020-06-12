@@ -29,7 +29,8 @@ import {
   Book as PerformanceIcon,
   CreditCard as PayIcon,
   Info as FeedbackIcon,
-  BookOpen as ProfileIcon
+  BookOpen as ProfileIcon,
+  Calendar as CalendarIcon
 } from 'react-feather';
 
 import Logo from '../../../components/Logo';
@@ -48,6 +49,11 @@ const navConfig = [
         title: 'Summary',
         icon: SummaryIcon,
         href: '/app/employee/summary'
+      },
+      {
+        title: 'Event Calendar',
+        href: '/app/calendar',
+        icon: CalendarIcon
       },
       {
         title: 'Job',
