@@ -159,8 +159,7 @@ function LoginView() {
               color="inherit"
               variant="subtitle1"
             >
-              Hella narvwhal Cosby sweater McSweeney&apos;s,
-              salvia kitsch before they sold out High Life.
+              Welcome to AMASHR Enterprise system
             </Typography>
             <Box
               alignItems="center"
