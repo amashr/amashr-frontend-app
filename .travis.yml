@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install: 
-  - docker build -t amashr/amashr-webapp -f Dockerfile .
+  - docker build -t amashr/amashr-frontend-app -f Dockerfile.dev .
 
 language: generic
 deploy: 
