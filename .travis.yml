@@ -15,7 +15,7 @@ deploy:
   bucket_name: "elasticbeanstalk-us-west-2-018302955701"
   bucket_path: "amashr-frontend"
   on: 
-    branch: master
+    branch: release
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
