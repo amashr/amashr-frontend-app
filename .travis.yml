@@ -9,10 +9,10 @@ language: generic
 deploy: 
   edge: true
   provider: elasticbeanstalk
-  region: "us-east-2"
+  region: "us-west-2"
   app: "amashr-frontend"
   env: "AmashrFrontend-env"
-  bucket_name: "elasticbeanstalk-us-east-2-682631084185"
+  bucket_name: "elasticbeanstalk-us-west-2-018302955701"
   bucket_path: "amashr-frontend"
   on: 
     branch: master
