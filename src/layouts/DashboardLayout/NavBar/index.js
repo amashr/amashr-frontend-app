@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
-  Chip,
   Divider,
   Drawer,
   Hidden,
@@ -19,283 +18,92 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import ReceiptIcon from '@material-ui/icons/ReceiptOutlined';
 import {
   Briefcase as BriefcaseIcon,
-  Calendar as CalendarIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Folder as FolderIcon,
-  BarChart as BarChartIcon,
-  Lock as LockIcon,
-  UserPlus as UserPlusIcon,
-  Shield as ShieldIcon,
-  AlertCircle as AlertCircleIcon,
-  Trello as TrelloIcon,
-  User as UserIcon,
-  Layout as LayoutIcon,
-  Edit as EditIcon,
-  DollarSign as DollarSignIcon,
-  Mail as MailIcon,
-  MessageCircle as MessageCircleIcon,
-  PieChart as PieChartIcon,
-  Share2 as ShareIcon,
-  Users as UsersIcon
+  Shield as BenefitsIcon,
+  Users as UsersIcon,
+  Grid as SummaryIcon,
+  Eye as OverviewIcon,
+  Target as CareerIcon,
+  Gift as CompensationIcon,
+  Book as PerformanceIcon,
+  CreditCard as PayIcon,
+  Info as FeedbackIcon,
+  BookOpen as ProfileIcon,
+  Calendar as CalendarIcon
 } from 'react-feather';
-// import Logo from 'src/components/Logo';
+
 import Logo from '../../../components/Logo';
 import NavItem from './NavItem';
 
 const navConfig = [
   {
-    subheader: 'Report',
+    subheader: 'Employee View',
     items: [
       {
-        title: 'Dashboard',
-        icon: PieChartIcon,
-        href: '/app/reports/dashboard'
+        title: 'Profile',
+        icon: ProfileIcon,
+        href: '/app/social/profile'
       },
       {
-        title: 'Dashboard Alternative',
-        icon: BarChartIcon,
-        href: '/app/reports/dashboard-alternative'
-      }
-    ]
-  },
-  {
-    subheader: 'Job',
-    items: [
-      {
-        title: 'Customers',
-        icon: UsersIcon,
-        href: '/app/management/customers',
-        items: [
-          {
-            title: 'List Customers',
-            href: '/app/management/customers'
-          },
-          {
-            title: 'View Customer',
-            href: '/app/management/customers/1'
-          },
-          {
-            title: 'Edit Customer',
-            href: '/app/management/customers/1/edit'
-          }
-        ]
+        title: 'Summary',
+        icon: SummaryIcon,
+        href: '/app/employee/summary'
       },
       {
-        title: 'Products',
-        icon: ShoppingCartIcon,
-        href: '/app/management/products',
-        items: [
-          {
-            title: 'List Products',
-            href: '/app/management/products'
-          },
-          {
-            title: 'Create Product',
-            href: '/app/management/products/create'
-          }
-        ]
-      },
-      {
-        title: 'Orders',
-        icon: FolderIcon,
-        href: '/app/management/orders',
-        items: [
-          {
-            title: 'List Orders',
-            href: '/app/management/orders'
-          },
-          {
-            title: 'View Order',
-            href: '/app/management/orders/1'
-          }
-        ]
-      },
-      {
-        title: 'Invoices',
-        icon: ReceiptIcon,
-        href: '/app/management/invoices',
-        items: [
-          {
-            title: 'List Invoices',
-            href: '/app/management/invoices'
-          },
-          {
-            title: 'View Invoice',
-            href: '/app/management/invoices/1'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    subheader: 'Applications',
-    items: [
-      {
-        title: 'Projects Platform',
-        href: '/app/projects',
-        icon: BriefcaseIcon,
-        items: [
-          {
-            title: 'Overview',
-            href: '/app/projects/overview'
-          },
-          {
-            title: 'Browse Projects',
-            href: '/app/projects/browse'
-          },
-          {
-            title: 'Create Project',
-            href: '/app/projects/create'
-          },
-          {
-            title: 'View Project',
-            href: '/app/projects/1'
-          }
-        ]
-      },
-      {
-        title: 'Social Platform',
-        href: '/app/social',
-        icon: ShareIcon,
-        items: [
-          {
-            title: 'Profile',
-            href: '/app/social/profile'
-          },
-          {
-            title: 'Feed',
-            href: '/app/social/feed'
-          }
-        ]
-      },
-      {
-        title: 'Kanban',
-        href: '/app/kanban',
-        icon: TrelloIcon
-      },
-      {
-        title: 'Mail',
-        href: '/app/mail',
-        icon: MailIcon,
-        info: () => (
-          <Chip
-            color="secondary"
-            size="small"
-            label="Updated"
-          />
-        )
-      },
-      {
-        title: 'Chat',
-        href: '/app/chat',
-        icon: MessageCircleIcon,
-        info: () => (
-          <Chip
-            color="secondary"
-            size="small"
-            label="Updated"
-          />
-        )
-      },
-      {
-        title: 'Calendar',
+        title: 'Event Calendar',
         href: '/app/calendar',
         icon: CalendarIcon
       },
-    ]
-  },
-  {
-    subheader: 'Auth',
-    items: [
       {
-        title: 'Login',
-        href: '/login-unprotected',
-        icon: LockIcon
+        title: 'Job',
+        icon: BriefcaseIcon,
+        href: '/app/employee/job'
       },
       {
-        title: 'Register',
-        href: '/register-unprotected',
-        icon: UserPlusIcon
+        title: 'Overview',
+        icon: OverviewIcon,
+        href: '/app/employee/overview'
       },
       {
-        title: 'Login: Guest Protected',
-        href: '/login',
-        icon: ShieldIcon
+        title: 'Performance',
+        icon: PerformanceIcon,
+        href: '/app/employee/perfrmance'
       },
       {
-        title: 'Register: Guest Protected',
-        href: '/register',
-        icon: ShieldIcon
-      }
-    ]
-  },
-  {
-    subheader: 'Pages',
-    href: '/app/pages',
-    items: [
-      {
-        title: 'Account',
-        href: '/app/account',
-        icon: UserIcon
+        title: 'Career',
+        icon: CareerIcon,
+        href: '/app/employee/career'
       },
       {
-        title: 'Error',
-        href: '/404',
-        icon: AlertCircleIcon
+        title: 'Feedback',
+        icon: FeedbackIcon,
+        href: '/app/employee/feedback'
       },
       {
-        title: 'Pricing',
-        href: '/pricing',
-        icon: DollarSignIcon
-      }
-    ]
-  },
-  {
-    subheader: 'Extra',
-    items: [
-      {
-        title: 'Charts',
-        href: '/app/extra/charts',
-        icon: BarChartIcon,
-        items: [
-          {
-            title: 'Apex Charts',
-            href: '/app/extra/charts/apex'
-          }
-        ]
+        title: 'Contact',
+        icon: BriefcaseIcon,
+        href: '/app/employee/contact'
       },
       {
-        title: 'Forms',
-        href: '/app/extra/forms',
-        icon: EditIcon,
-        items: [
-          {
-            title: 'Formik',
-            href: '/app/extra/forms/formik'
-          },
-          {
-            title: 'Redux Forms',
-            href: '/app/extra/forms/redux'
-          },
-        ]
+        title: 'Personal',
+        icon: UsersIcon,
+        href: '/app/employee/personal'
       },
       {
-        title: 'Editors',
-        href: '/app/extra/editors',
-        icon: LayoutIcon,
-        items: [
-          {
-            title: 'DraftJS Editor',
-            href: '/app/extra/editors/draft-js'
-          },
-          {
-            title: 'Quill Editor',
-            href: '/app/extra/editors/quill'
-          }
-        ]
+        title: 'Compensation',
+        icon: CompensationIcon,
+        href: '/app/employee/compensation'
+      },
+      {
+        title: 'Benefits',
+        icon: BenefitsIcon,
+        href: '/app/employee/benefits'
+      },
+      {
+        title: 'Pay',
+        icon: PayIcon,
+        href: '/app/employee/pay'
       }
     ]
   }
@@ -475,7 +283,7 @@ function NavBar({ openMobile, onMobileClose, }) {
               component={RouterLink}
               to="/docs"
             >
-              Check our docs
+              Customer Services
             </Link>
           </Box>
         </Box>

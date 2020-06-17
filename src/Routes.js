@@ -20,7 +20,7 @@ import GuestGuard from './components/GuestGuard';
 const routesConfig = [{
   exact: true,
   path: '/',
-  component: () => <Redirect to="/home" />
+  component: () => <Redirect to="/login" />
 },
 {
   exact: true,
@@ -52,6 +52,11 @@ const routesConfig = [{
     exact: true,
     path: '/app/account',
     component: lazy(() => import('./views/pages/AccountView'))
+  },
+  {
+    exact: true,
+    path: '/app/calendar',
+    component: lazy(() => import('./views/calendar/CalendarView'))
   },
   {
     exact: true,

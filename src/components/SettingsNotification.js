@@ -72,7 +72,7 @@ function SettingsNotification() {
           variant="body2"
           color="textSecondary"
         >
-          We automatically updated your settings.
+          AMASHR automatically updated your settings.
           You change the settings any time from your dashboard settings.
         </Typography>
         <Box

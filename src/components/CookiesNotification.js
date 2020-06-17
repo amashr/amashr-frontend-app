@@ -59,8 +59,8 @@ function CookiesNotification() {
           variant="body1"
           color="inherit"
         >
-          We use Cookies to ensure that we give you the best experience on our
-          website. Read our
+          AMASHR use Cookies to ensure that we give you the best experience on our
+          system. Read our
           {' '}
           <Link
             component="a"

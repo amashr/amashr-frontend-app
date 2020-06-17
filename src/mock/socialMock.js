@@ -4,24 +4,24 @@ import mock from '../utils/mock';
 mock.onGet('/api/social/profile').reply(200, {
   user: {
     id: '5e86809283e28b96d2d38537',
-    name: 'Katarina Smith',
-    email: 'katarina.smith@devias.io',
+    name: 'Doreen Johnson',
+    email: 'doreen.johnson@amashr.com',
     bio: 'Sales Manager',
-    avatar: '/static/images/avatars/avatar_6.png',
-    cover: '/static/images/covers/cover_1.jpg',
+    avatar: '/static/images/avatars/avatar_9.png',
+    cover: '/static/images/covers/cover_2.jpg',
     connectedStatus: 'not_connected',
     profileProgress: 50,
     quote: 'Everyone thinks of changing the world, but no one thinks of changing himself.',
     currentJob: {
-      title: 'Product Designer',
-      company: 'Devias IO'
+      title: 'Sales Manager',
+      company: 'Vodacom'
     },
     previousJob: {
-      title: 'UX Designer at',
-      company: 'Focus Aesthetic Dyanmics'
+      title: 'HR Manager at',
+      company: 'NMB Bank'
     },
-    currentCity: 'Bucharest',
-    originCity: 'Rm. Valcea'
+    currentCity: 'Dar es salaam',
+    originCity: 'Arusha'
   }
 });
 

@@ -29,6 +29,7 @@ function AccountView() {
     { value: 'general', label: 'General' },
     { value: 'subscription', label: 'Subscription' },
     { value: 'notifications', label: 'Notifications' },
+    { value: 'address', label: 'Address' },
     { value: 'security', label: 'Security' }
   ];
 

@@ -27,10 +27,10 @@ function Header({ className, ...rest }) {
         aria-label="breadcrumb"
       >
         <Link color="inherit" to="/app" component={RouterLink}>
-          Dashboard2
+          Employee
         </Link>
         <Typography color="textPrimary">
-          Account222
+          Account
         </Typography>
       </Breadcrumbs>
       <Typography

@@ -21,7 +21,7 @@ import {
 } from '@material-ui/core';
 import { updateProfile } from '../../../../actions/accountActions';
 
-const stateOptions = ['Alabama', 'New York', 'San Francisco'];
+const stateOptions = ['Dar es Salaam', 'Dodoma', 'Arusha'];
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -174,7 +174,7 @@ function GeneralSettings({ user, className, ...rest }) {
                 >
                   <TextField
                     fullWidth
-                    label="Select State"
+                    label="Select Region"
                     name="state"
                     onChange={handleChange}
                     select

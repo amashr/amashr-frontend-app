@@ -6,6 +6,10 @@ In the project directory, you can run:
 
 ### `yarn start`
 
+For docker container, run the following command after the docker build: 
+### `docker run -it -p 80:3000 imagename
+
+
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
