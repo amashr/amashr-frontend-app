@@ -45,8 +45,13 @@ const routesConfig = [{
   layout: DashboardLayout,
   routes: [{
     exact: true,
-    path: '/app',
-    component: () => <Redirect to="/app/reports/dashboard" />
+    path: '/app/employee',
+    component: () => <Redirect to="/app/employee/home" />
+  },
+  {
+    exact: true,
+    path: '/app/employee/home',
+    component: lazy(() => import('./views/employee/HomeView'))
   },
   {
     exact: true,

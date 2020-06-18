@@ -30,7 +30,8 @@ import {
   CreditCard as PayIcon,
   Info as FeedbackIcon,
   BookOpen as ProfileIcon,
-  Calendar as CalendarIcon
+  Calendar as CalendarIcon,
+  Home as HomeIcon
 } from 'react-feather';
 
 import Logo from '../../../components/Logo';
@@ -40,6 +41,11 @@ const navConfig = [
   {
     subheader: 'Employee View',
     items: [
+      {
+        title: 'Home',
+        icon: HomeIcon,
+        href: '/app/employee/home'
+      },
       {
         title: 'Profile',
         icon: ProfileIcon,
