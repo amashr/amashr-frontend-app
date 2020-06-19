@@ -1,7 +1,7 @@
 import moment from 'moment';
 import mock from '../utils/mock';
 
-mock.onGet('/api/social/profile').reply(200, {
+mock.onGet('/api/employee/profile').reply(200, {
   user: {
     id: '5e86809283e28b96d2d38537',
     name: 'Doreen Johnson',
@@ -25,7 +25,7 @@ mock.onGet('/api/social/profile').reply(200, {
   }
 });
 
-mock.onGet('/api/social/feed').reply(200, {
+mock.onGet('/api/employee/feed').reply(200, {
   posts: [
     {
       id: '5e887fa38598b6fe61667757',
@@ -147,7 +147,7 @@ mock.onGet('/api/social/feed').reply(200, {
   ]
 });
 
-mock.onGet('/api/social/users/1/posts').reply(200, {
+mock.onGet('/api/employee/users/1/posts').reply(200, {
   posts: [
     {
       id: '5e887faca2b7a1ddce01221a',
@@ -239,7 +239,7 @@ mock.onGet('/api/social/users/1/posts').reply(200, {
   ]
 });
 
-mock.onGet('/api/social/users/1/projects').reply(200, {
+mock.onGet('/api/employee/users/1/projects').reply(200, {
   projects: [
     {
       id: '5e88832046990a87d32e6caf',
@@ -307,7 +307,7 @@ mock.onGet('/api/social/users/1/projects').reply(200, {
   ]
 });
 
-mock.onGet('/api/social/users/1/reviews').reply(200, {
+mock.onGet('/api/employee/users/1/reviews').reply(200, {
   reviews: [
     {
       id: '5e887f7404ed12e9afb71841',
@@ -354,7 +354,7 @@ mock.onGet('/api/social/users/1/reviews').reply(200, {
   ]
 });
 
-mock.onGet('/api/social/users/1/connections').reply(200, {
+mock.onGet('/api/employee/users/1/connections').reply(200, {
   connections: [
     {
       id: '5e887a62195cc5aef7e8ca5d',

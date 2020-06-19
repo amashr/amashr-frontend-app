@@ -45,7 +45,7 @@ const routesConfig = [{
   layout: DashboardLayout,
   routes: [{
     exact: true,
-    path: '/app/employee',
+    path: '/app',
     component: () => <Redirect to="/app/employee/home" />
   },
   {
@@ -65,13 +65,13 @@ const routesConfig = [{
   },
   {
     exact: true,
-    path: '/app/social/profile',
-    component: lazy(() => import('./views/social/ProfileView'))
+    path: '/app/employee/profile',
+    component: lazy(() => import('./views/employee/ProfileView'))
   },
   {
     exact: true,
-    path: '/app/social',
-    component: () => <Redirect to="/app/social/profile" />
+    path: '/app/profile',
+    component: () => <Redirect to="/app/employee/profile" />
   }
   ]
 }

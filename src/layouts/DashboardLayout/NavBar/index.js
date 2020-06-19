@@ -49,7 +49,7 @@ const navConfig = [
       {
         title: 'Profile',
         icon: ProfileIcon,
-        href: '/app/social/profile'
+        href: '/app/employee/profile'
       },
       {
         title: 'Summary',
