@@ -31,7 +31,7 @@ function SocialFeedView() {
 
   const getPosts = useCallback(() => {
     axios
-      .get('/api/social/feed')
+      .get('/api/employee/feed')
       .then((response) => {
         if (isMountedRef.current) {
           setPosts(response.data.posts);

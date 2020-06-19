@@ -97,7 +97,13 @@ function Account() {
       >
         <MenuItem
           component={RouterLink}
-          to="/app/social/profile"
+          to="/app/employee/home"
+        >
+          Home
+        </MenuItem>
+        <MenuItem
+          component={RouterLink}
+          to="/app/employee/profile"
         >
           Profile
         </MenuItem>

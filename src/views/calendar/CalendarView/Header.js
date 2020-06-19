@@ -53,7 +53,7 @@ function Header({
             to="/app"
             component={RouterLink}
           >
-            Employee
+            Home
           </Link>
           <Typography
             variant="body1"

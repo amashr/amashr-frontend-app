@@ -32,7 +32,7 @@ function Timeline({
 
   const getPosts = useCallback(() => {
     axios
-      .get('/api/social/users/1/posts')
+      .get('/api/employee/users/1/posts')
       .then((response) => {
         if (isMountedRef.current) {
           setPosts(response.data.posts);

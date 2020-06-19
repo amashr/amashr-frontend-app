@@ -83,7 +83,7 @@ function Connections({ className, ...rest }) {
 
   const getConnections = useCallback(() => {
     axios
-      .get('/api/social/users/1/connections')
+      .get('/api/employee/users/1/connections')
       .then((response) => {
         if (isMountedRef.current) {
           setConnections(response.data.connections);

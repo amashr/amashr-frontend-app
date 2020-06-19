@@ -46,7 +46,12 @@ const routesConfig = [{
   routes: [{
     exact: true,
     path: '/app',
-    component: () => <Redirect to="/app/reports/dashboard" />
+    component: () => <Redirect to="/app/employee/home" />
+  },
+  {
+    exact: true,
+    path: '/app/employee/home',
+    component: lazy(() => import('./views/employee/HomeView'))
   },
   {
     exact: true,
@@ -55,18 +60,43 @@ const routesConfig = [{
   },
   {
     exact: true,
-    path: '/app/calendar',
+    path: '/app/employee/home/calendar',
     component: lazy(() => import('./views/calendar/CalendarView'))
   },
   {
     exact: true,
-    path: '/app/social/profile',
-    component: lazy(() => import('./views/social/ProfileView'))
+    path: [
+      '/app/employee/home/chat/new',
+      '/app/employee/home/chat/:threadKey'
+    ],
+    component: lazy(() => import('./views/chat/ChatView'))
   },
   {
     exact: true,
-    path: '/app/social',
-    component: () => <Redirect to="/app/social/profile" />
+    path: '/app/employee/home/chat',
+    component: () => <Redirect to="/app/employee/home/chat/new" />
+  },
+  {
+    exact: true,
+    path: [
+      '/app/employee/home/mail/label/:customLabel/:mailId?',
+      '/app/employee/home/mail/:systemLabel/:mailId?'
+    ],
+    component: lazy(() => import('./views/mail/MailView'))
+  }, {
+    exact: true,
+    path: '/app/employee/home/mail',
+    component: () => <Redirect to="/app/employee/home/mail/all" />
+  },
+  {
+    exact: true,
+    path: '/app/employee/profile',
+    component: lazy(() => import('./views/employee/ProfileView'))
+  },
+  {
+    exact: true,
+    path: '/app/profile',
+    component: () => <Redirect to="/app/employee/profile" />
   }
   ]
 }

@@ -43,7 +43,7 @@ function ProfileView() {
 
   const getPosts = useCallback(() => {
     axios
-      .get('/api/social/profile')
+      .get('/api/employee/profile')
       .then((response) => {
         if (isMountedRef.current) {
           setUser(response.data.user);
