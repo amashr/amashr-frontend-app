@@ -24,9 +24,10 @@ import {
   Maximize as MaximizeIcon,
   Minimize as MinimizeIcon
 } from 'react-feather';
-import { closeNewMessage } from 'src/actions/mailActions';
-import QuillEditor from 'src/components/QuillEditor';
 import clsx from 'clsx';
+import { closeNewMessage } from '../../../actions/mailActions';
+// eslint-disable-next-line import/extensions
+import QuillEditor from '../../../components/QuillEditor';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -144,7 +144,7 @@ function ThreadList({ className, ...rest }) {
                     button
                     component={RouterLink}
                     key={contact.id}
-                    to={`/app/chat/${contact.username}`}
+                    to={`/app/employee/home/chat/${contact.username}`}
                   >
                     <ListItemAvatar>
                       <Avatar

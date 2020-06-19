@@ -38,14 +38,14 @@ function Toolbar({ className, ...rest }) {
 
   const handleBack = () => {
     if (systemLabel) {
-      return history.push(`/app/mail/${systemLabel}`);
+      return history.push(`/app/employee/home/mail/${systemLabel}`);
     }
 
     if (customLabel) {
-      return history.push(`/app/mail/label/${customLabel}`);
+      return history.push(`/app/employee/home/mail/label/${customLabel}`);
     }
 
-    return history.push('/app/mail/inbox');
+    return history.push('/app/employee/home/mail/inbox');
   };
 
   return (

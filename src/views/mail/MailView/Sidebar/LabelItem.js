@@ -37,7 +37,7 @@ function getIcon(label) {
 }
 
 function getTo(label) {
-  const baseUrl = '/app/mail';
+  const baseUrl = '/app/employee/home/mail';
 
   if (label.type === 'system_label') {
     return `${baseUrl}/${label.id}`;

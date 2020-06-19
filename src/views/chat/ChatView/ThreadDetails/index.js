@@ -38,7 +38,7 @@ function threadSelector(state, threadKey, history) {
     )[0];
 
     if (!contactId) {
-      history.push('/app/chat/new');
+      history.push('/app/employee/home/chat/new');
     }
 
     return {

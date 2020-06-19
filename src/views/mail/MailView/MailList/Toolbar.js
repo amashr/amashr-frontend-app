@@ -22,7 +22,7 @@ import {
   Search as SearchIcon,
   Menu as MenuIcon
 } from 'react-feather';
-import { openSidebar } from 'src/actions/mailActions';
+import { openSidebar } from '../../../../actions/mailActions';
 
 const useStyles = makeStyles((theme) => ({
   root: {

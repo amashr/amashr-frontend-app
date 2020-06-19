@@ -60,7 +60,7 @@ function ThreadItem({
         className
       )}
       component={RouterLink}
-      to={`/app/chat/${thread.key}`}
+      to={`/app/employee/home/chat/${thread.key}`}
       {...rest}
     >
       <ListItemAvatar>

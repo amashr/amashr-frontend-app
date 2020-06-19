@@ -18,8 +18,8 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import ReplyIcon from '@material-ui/icons/ReplyOutlined';
 import ReplyAllIcon from '@material-ui/icons/ReplyAllOutlined';
 import DeleteIcon from '@material-ui/icons/DeleteOutlined';
-import getInitials from 'src/utils/getInitials';
-import { getMail } from 'src/actions/mailActions';
+import getInitials from '../../../../utils/getInitials';
+import { getMail } from '../../../../actions/mailActions';
 import Toolbar from './Toolbar';
 import MailReply from './MailReply';
 

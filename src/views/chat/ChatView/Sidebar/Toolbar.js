@@ -46,7 +46,7 @@ function Toolbar({ className, ...rest }) {
       </IconButton>
       <IconButton
         component={RouterLink}
-        to="/app/chat/new"
+        to="/app/employee/home/chat/new"
       >
         <SvgIcon fontSize="small">
           <EditIcon />

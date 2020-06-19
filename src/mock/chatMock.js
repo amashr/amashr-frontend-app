@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
-import mock from 'src/utils/mock';
 import _ from 'lodash';
+import mock from '../utils/mock';
 
 const db = {
   contacts: [

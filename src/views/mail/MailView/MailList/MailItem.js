@@ -19,12 +19,12 @@ import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import LabelImportantOutlinedIcon from '@material-ui/icons/LabelImportantOutlined';
-import getInitials from 'src/utils/getInitials';
 import { useSelector } from 'react-redux';
+import getInitials from '../../../../utils/getInitials';
 
 function getTo(params, mailId) {
   const { systemLabel, customLabel } = params;
-  const baseUrl = '/app/mail';
+  const baseUrl = '/app/employee/home/mail';
 
   if (systemLabel) {
     return `${baseUrl}/${systemLabel}/${mailId}`;

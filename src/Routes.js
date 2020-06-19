@@ -66,10 +66,27 @@ const routesConfig = [{
   {
     exact: true,
     path: [
-      '/app/employee/home/chat',
+      '/app/employee/home/chat/new',
       '/app/employee/home/chat/:threadKey'
     ],
     component: lazy(() => import('./views/chat/ChatView'))
+  },
+  {
+    exact: true,
+    path: '/app/employee/home/chat',
+    component: () => <Redirect to="/app/employee/home/chat/new" />
+  },
+  {
+    exact: true,
+    path: [
+      '/app/employee/home/mail/label/:customLabel/:mailId?',
+      '/app/employee/home/mail/:systemLabel/:mailId?'
+    ],
+    component: lazy(() => import('./views/mail/MailView'))
+  }, {
+    exact: true,
+    path: '/app/employee/home/mail',
+    component: () => <Redirect to="/app/employee/home/mail/all" />
   },
   {
     exact: true,
