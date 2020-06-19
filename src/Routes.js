@@ -60,8 +60,16 @@ const routesConfig = [{
   },
   {
     exact: true,
-    path: '/app/calendar',
+    path: '/app/employee/home/calendar',
     component: lazy(() => import('./views/calendar/CalendarView'))
+  },
+  {
+    exact: true,
+    path: [
+      '/app/employee/home/chat',
+      '/app/employee/home/chat/:threadKey'
+    ],
+    component: lazy(() => import('./views/chat/ChatView'))
   },
   {
     exact: true,

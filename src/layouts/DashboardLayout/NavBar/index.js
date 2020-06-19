@@ -8,6 +8,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
 import {
   Avatar,
+  Chip,
   Box,
   Divider,
   Drawer,
@@ -18,19 +19,25 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
+import DeviceHubOutlinedIcon from '@material-ui/icons/DeviceHubOutlined';
 import {
   Briefcase as BriefcaseIcon,
   Shield as BenefitsIcon,
   Users as UsersIcon,
   Grid as SummaryIcon,
   Eye as OverviewIcon,
+  MessageCircle as MessageCircleIcon,
+  Mail as MailIcon,
   Target as CareerIcon,
   Gift as CompensationIcon,
   Book as PerformanceIcon,
   CreditCard as PayIcon,
   Info as FeedbackIcon,
+  Activity as TalentIcon,
   BookOpen as ProfileIcon,
   Calendar as CalendarIcon,
+  BarChart as GoalsIcon,
+  Package as SalaryIcon,
   Home as HomeIcon
 } from 'react-feather';
 
@@ -44,7 +51,43 @@ const navConfig = [
       {
         title: 'Home',
         icon: HomeIcon,
-        href: '/app/employee/home'
+        href: '/app/employee/home',
+        items: [
+          {
+            title: 'Overview',
+            href: '/app/employee/home',
+            icon: OverviewIcon
+          },
+          {
+            title: 'Event Calender',
+            href: '/app/employee/home/calendar',
+            icon: CalendarIcon
+          },
+          {
+            title: 'Mail',
+            href: '/app/employee/home/mail',
+            icon: MailIcon,
+            info: () => (
+              <Chip
+                color="secondary"
+                size="small"
+                label="Updated"
+              />
+            )
+          },
+          {
+            title: 'Chat',
+            href: '/app/employee/home/chat',
+            icon: MessageCircleIcon,
+            info: () => (
+              <Chip
+                color="secondary"
+                size="small"
+                label="Updated"
+              />
+            )
+          }
+        ]
       },
       {
         title: 'Profile',
@@ -57,9 +100,9 @@ const navConfig = [
         href: '/app/employee/summary'
       },
       {
-        title: 'Event Calendar',
-        href: '/app/calendar',
-        icon: CalendarIcon
+        title: 'Org Chart',
+        icon: DeviceHubOutlinedIcon,
+        href: '/app/employee/org'
       },
       {
         title: 'Job',
@@ -67,24 +110,31 @@ const navConfig = [
         href: '/app/employee/job'
       },
       {
-        title: 'Overview',
-        icon: OverviewIcon,
-        href: '/app/employee/overview'
-      },
-      {
-        title: 'Performance',
-        icon: PerformanceIcon,
-        href: '/app/employee/perfrmance'
-      },
-      {
-        title: 'Career',
-        icon: CareerIcon,
-        href: '/app/employee/career'
-      },
-      {
-        title: 'Feedback',
-        icon: FeedbackIcon,
-        href: '/app/employee/feedback'
+        title: 'Talent',
+        icon: TalentIcon,
+        href: '/app/employee/perfomance',
+        items: [
+          {
+            title: 'Performance',
+            href: '/app/employee/talent/performance',
+            icon: PerformanceIcon
+          },
+          {
+            title: 'Career',
+            href: '/app/employee/talent/career',
+            icon: CareerIcon
+          },
+          {
+            title: 'Feedback',
+            href: '/app/employee/talent/feedback',
+            icon: FeedbackIcon
+          },
+          {
+            title: 'Goals',
+            href: '/app/employee/talent/goals',
+            icon: GoalsIcon
+          }
+        ]
       },
       {
         title: 'Contact',
@@ -97,19 +147,26 @@ const navConfig = [
         href: '/app/employee/personal'
       },
       {
-        title: 'Compensation',
-        icon: CompensationIcon,
-        href: '/app/employee/compensation'
-      },
-      {
-        title: 'Benefits',
-        icon: BenefitsIcon,
-        href: '/app/employee/benefits'
-      },
-      {
-        title: 'Pay',
-        icon: PayIcon,
-        href: '/app/employee/pay'
+        title: 'Salary',
+        icon: SalaryIcon,
+        href: '/app/employee/salary',
+        items: [
+          {
+            title: 'Compensation',
+            href: '/app/employee/salary/compensation',
+            icon: CompensationIcon
+          },
+          {
+            title: 'Benetifs',
+            href: '/app/employee/salary/benefits',
+            icon: BenefitsIcon
+          },
+          {
+            title: 'Pay',
+            href: '/app/employee/salary/pay',
+            icon: PayIcon
+          }
+        ]
       }
     ]
   }
@@ -213,7 +270,7 @@ function NavBar({ openMobile, onMobileClose, }) {
             display="flex"
             justifyContent="center"
           >
-            <RouterLink to="/">
+            <RouterLink to="/app/employee/home">
               <Logo />
             </RouterLink>
           </Box>
