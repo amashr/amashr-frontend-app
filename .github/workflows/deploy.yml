@@ -3,7 +3,7 @@ name: deploy
 on: 
   push:
     branches: 
-      - release
+      - release-dockerhub
 
 jobs:
   build:
