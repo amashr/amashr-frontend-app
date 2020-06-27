@@ -17,6 +17,8 @@ spec:
         image: amaumba1/amashr-frontend
         ports:
           - containerPort: 3000
+        stdin: true
+        tty: true
 ---
 apiVersion: v1
 kind: Service
