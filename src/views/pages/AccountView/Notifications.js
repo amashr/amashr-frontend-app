@@ -125,7 +125,7 @@ function Notifications({ className, ...rest }) {
                 variant="body2"
                 color="textSecondary"
               >
-                You will recieve emails in your business email address
+                You will recieve emails in your business email address.
               </Typography>
               <div>
                 <FormControlLabel
