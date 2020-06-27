@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amashr-frontend-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amashr-frontend
+  template:
+    metadata:
+      labels:
+        app: amashr-frontend
+    spec:
+      containers:
+      - name: amashr-frontend
+        image: amaumba1/amashr-frontend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: amashr-frontend-srv
+spec:
+  selector:
+    app: amashr-frontend
+  ports: 
+    - name: amashr-frontend
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
