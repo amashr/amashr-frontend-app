@@ -152,7 +152,7 @@ function LoginView() {
           </CardContent>
           <CardMedia
             className={classes.media}
-            image="/static/images/auth.png"
+            image="/static/images/auth1.png"
             title="Cover"
           >
             <Typography
