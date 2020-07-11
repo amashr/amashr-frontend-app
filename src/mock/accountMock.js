@@ -3,7 +3,7 @@ import _ from 'lodash';
 import jwt from 'jsonwebtoken';
 import mock from '../utils/mock';
 
-const JWT_SECRET = 'devias-top-secret-key';
+const JWT_SECRET = 'amashr-top-secret-key';
 const JWT_EXPIRES_IN = '2 days';
 
 const db = {
